@@ -19,7 +19,7 @@ $(OBJ)/systemPrgC.o: $(SRC)/systemPrgC.cpp
 
 clean:
 	@echo "Cleaning is in Progress"
-	rm -f a.out systemPrg1
+	rm -f a.out systemPrgC
 	rm -f *.o
 	rm -f $(OBJ)/*.o
-	rm -f $(BIN)/systemPrg1 
+	rm -f $(BIN)/systemPrgC
