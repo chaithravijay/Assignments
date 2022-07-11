@@ -7,13 +7,13 @@ BIN = ./bin
 OBJ = ./obj
 SRC = ./src
 
-all: systemPrg
+all: systemPrgC
 
-sysPrg1: $(OBJ)/systemPrg.o
-	$(CC) $(LFLAGS) $(BIN)/systemPrg1 $(OBJ)/systemPrg1.o
+sysPrgC: $(OBJ)/systemPrgC.o
+	$(CC) $(LFLAGS) $(BIN)/systemPrgC $(OBJ)/systemPrgC.o
 
-$(OBJ)/systemPrg1.o: $(SRC)/systemPrg1.cpp
-	$(CC) $(CFLAGS) $(IFLAG) $(SRC)/systemPrg1.cpp 
+$(OBJ)/systemPrgC.o: $(SRC)/systemPrgC.cpp
+	$(CC) $(CFLAGS) $(IFLAG) $(SRC)/systemPrgC.cpp 
 	mv *.o $(OBJ)
 
 
