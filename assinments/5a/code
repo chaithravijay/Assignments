@@ -52,14 +52,18 @@ bool SNReplace(char *key, char*repStr)
   }
    return false;
 }
-     int getMaxWords(){
-     if(max<strlen(words[i])){
-        max = strlen(words[i]);
+      int getMaxWords(){
+        int max=strlen(words[0]);
+        int pos=0;
+        for(int i=1;i<count;i++){
+        if(max < strlen(words[i])){
+            max = strlen(words[i]);
             pos = i;
 
         }
+        }
+        return pos;
     }
-    return pos;
 };
 
 int main(){
@@ -67,7 +71,7 @@ int main(){
     Words ws;
     string line;
     getline(cin, line);
-    ws.setWrods((char *)line.c_str());
+    ws.setWords((char *)line.c_str());
     ws.dispWords();
 
     cout<<"Max of all Words: "<<ws.getMaxWord(ws.getMaxWords())<<endl;
@@ -84,4 +88,3 @@ int main(){
     }
     return 0;
 }
-
